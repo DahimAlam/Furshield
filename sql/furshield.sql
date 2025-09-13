@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2025 at 12:19 AM
+-- Generation Time: Sep 13, 2025 at 10:47 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -56,10 +56,11 @@ CREATE TABLE `addoption` (
 --
 
 INSERT INTO `addoption` (`id`, `created_by`, `shelter_id`, `name`, `species`, `breed`, `age`, `gender`, `avatar`, `image`, `category`, `image_alt`, `description`, `featured`, `urgent_until`, `spotlight`, `status`, `hold_until`, `city`, `created_at`, `updated_at`) VALUES
-(2, 12, 12, 'dzfs', 'Cat', 'sdfsf', '12', 'Female', 'pet_20250912_180004_a224947d.jpg', NULL, NULL, NULL, 'adqa', 0, NULL, 0, 'available', NULL, NULL, '2025-09-12 16:00:04', '2025-09-12 19:26:01'),
-(3, 35, 35, 'Brownie', 'Cat', 'Persian', '2', 'Female', 'pet_20250912_202120_e896764e.webp', NULL, NULL, NULL, 'Searching for new home', 0, NULL, 0, 'available', NULL, NULL, '2025-09-12 18:21:20', '2025-09-12 19:26:01'),
-(4, 35, 35, 'Hash', 'Dog', 'Husky', '3months', 'Male', 'pet_20250912_210118_65ccd7b0.jpg', 'pet_20250912_210118_65ccd7b0.jpg', 'Puppy', '', '', 1, NULL, 1, 'available', NULL, 'karachi', '2025-09-12 19:01:18', '2025-09-12 19:26:01'),
-(6, 35, 35, 'Angor', 'Other', 'Angora', '2', 'Male', 'pet_20250912_214618_48c50c03.jpg', 'pet_20250912_214618_48c50c03.jpg', 'Baby', '', '', 1, '2025-09-14', 1, 'pending', NULL, 'Lahore', '2025-09-12 19:46:18', '2025-09-12 20:38:13');
+(11, 36, 36, 'Huskiey', 'Dog', 'wolf', '2', 'Male', 'pet_20250913_084056_f3f5ef50.jpg', 'pet_20250913_084056_f3f5ef50.jpg', '', '', '', 1, NULL, 0, 'pending', NULL, 'karachi', '2025-09-13 06:40:56', '2025-09-13 07:47:59'),
+(12, 36, 36, 'Rabit', 'Other', 'Angora', '1', 'Female', 'pet_20250913_084223_ce0e44c0.jpg', 'pet_20250913_084223_ce0e44c0.jpg', '', '', 'Based on its name, you might think the Alaska rabbit originated in the state of Alaska, but the jet-black breed is in fact native to Germany, where it was created primarily as a fur rabbit (non-pet), although the attractive-looking Alaska rabbit can make a fine pet. Though it was at one time recognized by the American Rabbit Breeders Association, the breed is no longer recognized by ARBA. The Alaska is recognized by the British Rabbit Council in the United Kingdom.', 0, NULL, 0, 'available', NULL, '', '2025-09-13 06:42:23', '2025-09-13 06:42:23'),
+(13, 36, 36, 'Samin', 'Cat', 'Siamese', '1', 'Female', 'pet_20250913_084522_4847e9e5.jpg', 'pet_20250913_084522_4847e9e5.jpg', 'cat', '', 'The cat, also referred to as the domestic cat or house cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the family Felidae. Advances in archaeology and genetics have shown that the domestication of the cat occurred in the Near East around', 0, NULL, 0, 'available', NULL, '', '2025-09-13 06:45:22', '2025-09-13 06:45:22'),
+(14, 36, 36, 'Samin', 'Cat', 'Siamese', '1', 'Female', 'pet_20250913_091606_518b8aea.jpg', 'pet_20250913_091606_518b8aea.jpg', '', '', 'Each pouch is packed with essential nutrients designed to support your dog’s overall health and vitality. With a carefully formulated recipe, you can rest assured that your furry companion is getting the balanced diet they deserve.', 0, NULL, 0, 'pending', NULL, 'karachi', '2025-09-13 07:16:06', '2025-09-13 07:46:39'),
+(15, 44, 44, 'Rabbit', 'Other', 'Rabbit2', '2year', 'Male', 'pet_20250913_095712_1f20afe3.jpg', 'pet_20250913_095712_1f20afe3.jpg', 'BAby', '', '', 1, '2025-09-13', 1, 'available', NULL, 'karachi', '2025-09-13 07:57:12', '2025-09-13 07:57:12');
 
 -- --------------------------------------------------------
 
@@ -184,13 +185,6 @@ CREATE TABLE `appointments` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `appointments`
---
-
-INSERT INTO `appointments` (`id`, `pet_id`, `owner_id`, `vet_id`, `scheduled_at`, `appointment_time`, `status`, `notes`, `created_at`) VALUES
-(8, 17, 34, 33, '2025-09-13 10:30:00', '2025-09-13 10:30:00', 'approved', NULL, '2025-09-12 17:53:50');
-
 -- --------------------------------------------------------
 
 --
@@ -213,8 +207,10 @@ CREATE TABLE `blogs` (
 --
 
 INSERT INTO `blogs` (`id`, `title`, `slug`, `category`, `image`, `content`, `is_active`, `created_at`) VALUES
-(1, '5 Tips for a Healthy Dog', 'healthy-dog-tips', 'Care', 'uploads/blogs/dogtips.jpg', 'From balanced diet to exercise, here are 5 simple tips to keep your dog healthy.', 1, '2025-09-09 19:38:17'),
-(2, 'How to Prepare for Adopting a Cat', 'adopting-a-cat', 'Adoption', 'uploads/blogs/cattips.jpg', 'Adopting a cat is a big responsibility. Here’s what you need to prepare.', 1, '2025-09-09 19:38:17');
+(1, '5 Tips for a Healthy Dog', 'healthy-dog-tips', 'Care', '/uploads/blo/blog-3b518720.jpg', 'From balanced diet to exercise, here are 5 simple tips to keep your dog healthy.', 1, '2025-09-09 19:38:17'),
+(2, 'How to Prepare for Adopting a Cat', 'adopting-a-cat', 'Adoption', '/uploads/blo/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg', 'Adopting a cat is a big responsibility. Here’s what you need to prepare.', 1, '2025-09-09 19:38:17'),
+(3, 'Tips for a Healthy Dog', NULL, NULL, '/uploads/blo/blog-c6e372d5.jpg', 'Tips for a Healthy Dog', 1, '2025-09-13 04:41:34'),
+(4, 'rabit', NULL, NULL, '/uploads/blo/blog-50c185a1.jpg', 'My blog is a growing resource covering all aspects of pet rabbit ownership. Starting with basic rabbit care, including diet, housing and health. Along with other general and advanced topics. So, whether you’re a new, or an experienced rabbit owner, you’ll find practical articles and advice, as well my rabbit stories to enrich your rabbit care journey.', 1, '2025-09-13 06:52:04');
 
 -- --------------------------------------------------------
 
@@ -293,8 +289,10 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `title`, `date`, `city`, `image`, `link`, `is_active`, `created_at`) VALUES
-(1, 'Free Vaccination Camp', '2025-09-20', 'Karachi', 'uploads/events/vaccine.jpg', 'https://furshield.com/events/vaccine-camp', 1, '2025-09-09 19:38:17'),
-(2, 'Pet Adoption Fair', '2025-10-05', 'Lahore', 'uploads/events/adoptionfair.jpg', 'https://furshield.com/events/adoption-fair', 1, '2025-09-09 19:38:17');
+(1, 'Free Vaccination Camp', '2025-09-20', 'Karachi', '/uploads/events/e-c7c9ffcc.jpg', 'https://furshield.com/events/vaccine-camp', 1, '2025-09-09 19:38:17'),
+(2, 'Pet Adoption Fair', '2025-10-05', 'Lahore', '/uploads/events/e-bd279704.jpg', 'https://furshield.com/events/adoption-fair', 1, '2025-09-09 19:38:17'),
+(3, 'Dog race', '2025-09-11', 'Lahore', '/uploads/events/e-045094a9.jpg', 'https://iditarod.com/', 1, '2025-09-13 06:55:28'),
+(6, 'Dog & Pet Events', '2025-09-25', 'karachi', '/uploads/events/e-b6281cb9.jpg', 'https://www.protectivity.com/knowledge-centre/dog-pet-events-2024/', 1, '2025-09-13 07:14:21');
 
 -- --------------------------------------------------------
 
@@ -356,7 +354,8 @@ CREATE TABLE `health_records` (
 --
 
 INSERT INTO `health_records` (`id`, `owner_id`, `pet_id`, `record_type`, `title`, `record_date`, `notes`, `file_path`, `file_mime`, `file_size`, `created_at`) VALUES
-(2, 34, 17, '', 'Leg xray', '2025-09-02', '', 'uploads/records/hr_20250912_195302_8b0a78a4.jpg', 'image/jpeg', 18030, '2025-09-12 17:53:02');
+(3, 42, 19, '', 'Leg Xray', '2025-09-08', 'Leg injury', 'uploads/records/hr_20250913_094547_a776c83f.jpg', 'image/jpeg', 18030, '2025-09-13 07:45:47'),
+(4, 46, 20, '', 'Deworming booster', '2025-09-17', 'ffahfoi', NULL, NULL, NULL, '2025-09-13 08:31:40');
 
 -- --------------------------------------------------------
 
@@ -493,9 +492,9 @@ CREATE TABLE `owners` (
 --
 
 INSERT INTO `owners` (`user_id`, `full_name`, `email`, `phone`, `address`, `city`, `country`, `adopt_interest`, `created_at`, `updated_at`) VALUES
-(12, NULL, NULL, NULL, NULL, 'Multan', 'Pakistan', 1, '2025-09-10 16:16:38', NULL),
-(32, 'Hunain Sheikh', 'hunain123@gmail.com', '30274917493', NULL, 'Karachi', 'Pakistan', 1, '2025-09-11 13:16:08', NULL),
-(34, 'Dahim Alam', 'dahimalam00@gmail.com', '03352176482', NULL, 'Karachi', 'Pakistan', 1, '2025-09-12 11:29:48', NULL);
+(39, 'anas', 'sham@gmail.com', '03312217600', NULL, 'Karachi', 'Pakistan', 1, '2025-09-13 06:10:09', NULL),
+(42, 'Demo', 'demo123@gmail.com', '0315674893', NULL, 'Karachi', 'Pakistan', 1, '2025-09-13 07:42:50', NULL),
+(46, 'Demo3', 'demo3@gmail.com', '30156396397', NULL, 'Islamabad', 'Pakistan', 1, '2025-09-13 08:30:21', NULL);
 
 -- --------------------------------------------------------
 
@@ -548,8 +547,8 @@ CREATE TABLE `pets` (
 
 INSERT INTO `pets` (`id`, `user_id`, `name`, `species`, `breed`, `age`, `gender`, `avatar`, `image`, `category`, `image_alt`, `description`, `featured`, `urgent_until`, `spotlight`, `status`, `city`, `created_at`, `updated_at`) VALUES
 (11, 8, 'anas', 'DOG', 'Persian', 7, 'Female', NULL, 'pet_20250911_114827_509fa147.jpeg', NULL, NULL, '{\"age_unit\":\"y\",\"next_vaccine\":\"2025\\/12\\/12\",\"allergies\":\"ASDASDASA\",\"vaccinated\":1,\"notes\":\"nm  b\"}', 0, NULL, 0, 'available', NULL, '2025-09-11 09:48:27', '2025-09-11 09:48:27'),
-(16, 32, 'Snow', 'Cat', 'Persian', 2, 'Female', NULL, 'pet_20250911_151821_3f7933d6.jpeg', NULL, NULL, '{\"age_unit\":\"y\",\"next_vaccine\":\"2025-12-6\\/Deworming\",\"allergies\":\"Chicken\",\"vaccinated\":1,\"notes\":\"\"}', 0, NULL, 0, 'available', NULL, '2025-09-11 13:18:21', '2025-09-11 13:18:21'),
-(17, 34, 'Bunny', 'Rabbit', 'mini lop', 2, 'Male', NULL, 'pet_20250912_195117_239abf77.jpeg', NULL, NULL, '{\"age_unit\":\"y\",\"next_vaccine\":\"2025-11-5\",\"allergies\":\"Leaves\",\"vaccinated\":1,\"notes\":\"Neutering\"}', 0, NULL, 0, 'available', NULL, '2025-09-12 17:51:17', '2025-09-12 17:51:17');
+(19, 42, 'Glory', 'Cat', 'Persian', 2, 'Female', NULL, 'pet_20250913_094458_ac4594e2.jpeg', NULL, NULL, '{\"age_unit\":\"y\",\"next_vaccine\":\"2026-1-5\",\"allergies\":\"Chicken\",\"vaccinated\":1,\"notes\":\"Sapying\"}', 0, NULL, 0, 'available', NULL, '2025-09-13 07:44:58', '2025-09-13 07:44:58'),
+(20, 46, 'Snow', 'Cat', 'Persian', 2, 'Female', NULL, 'pet_20250913_103114_17b8a583.jpeg', NULL, NULL, '{\"age_unit\":\"y\",\"next_vaccine\":\"2025-12-5\",\"allergies\":\"Chicken\",\"vaccinated\":1,\"notes\":\"\"}', 0, NULL, 0, 'available', NULL, '2025-09-13 08:31:14', '2025-09-13 08:31:14');
 
 -- --------------------------------------------------------
 
@@ -623,10 +622,14 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `stock_qty`, `image`, `image_alt`, `description`, `featured`) VALUES
-(1, 'Premium Dog Food', 2500.00, 20, 'uploads/products/dogfood.jpg', NULL, 'High-protein chicken formula for active dogs.', 1),
-(2, 'Cat Scratching Post', 1800.00, 15, 'uploads/products/scratchpost.jpg', NULL, 'Durable sisal rope scratching post for indoor cats.', 1),
-(3, 'Bird Cage Deluxe', 5500.00, 5, 'uploads/products/birdcage.jpg', NULL, 'Spacious cage suitable for parrots & cockatiels.', 1),
-(4, 'Whishkas Treat', 200.00, 10, 'uploads/products/prod_20250912_135743_cd0fafd3d131.webp', NULL, 'Good for cats', 1);
+(1, 'Premium Dog Food', 2500.00, 20, 'uploads/products/prod_20250913_074001_6bab222abeb2.jpg', NULL, 'High-protein chicken formula for active dogs.', 1),
+(2, 'Cat Scratching Post', 1800.00, 15, 'uploads/products/prod_20250913_073824_8dda4d092f23.webp', NULL, 'Durable sisal rope scratching post for indoor cats.', 1),
+(4, 'Whishkas Treat', 200.00, 10, 'uploads/products/prod_20250912_135743_cd0fafd3d131.webp', NULL, 'Good for cats', 1),
+(5, 'Pet Feeding kit', 400.00, 300, 'uploads/products/prod_20250913_090645_929e83af128b.webp', NULL, 'A wonderful feeders’ kit to give their dog or cat nutrient-containing liquids or medication. In the treatment of sick patients or supplementing routine diet, feeding kits have greatly made fluid administration a lot easier as the liquid is administered painlessly in an efficient manner without any injury either to the animal or the owner. All these liquids, and especially when there is the involvement of illness or recovery, are really hard to administer or provide without proper equipment.', 0),
+(6, 'Adjustable Bell Collar', 300.00, 400, 'uploads/products/prod_20250913_090805_a527921f906d.webp', NULL, '', 0),
+(7, 'Maybel Elite Premium Cat Food', 0.00, 300, 'uploads/products/prod_20250913_090940_5595640eca11.webp', NULL, 'We are told that Maybel Elite is Pakistan’s Best Cat Food by experts, vets, and other cat owners. And there are solid reasons for that, the first being the immediate health benefits for cat owners. Elite has been developed by experts for four years by people who were unable to find optimal food for their cats. Options available in the market are either unhealthy or overpriced. And there is always some degree of pet food availability issue. Maybel’s Elite also offers cat owners the best of both worlds – affordability and health benefits. So if you are a cat owner, there’s nothing else like Elite.', 0),
+(8, 'Pedigree Wet Dog Food', 220.00, 34, 'uploads/products/prod_20250913_091044_194d096ef18c.webp', NULL, 'Each pouch is packed with essential nutrients designed to support your dog’s overall health and vitality. With a carefully formulated recipe, you can rest assured that your furry companion is getting the balanced diet they deserve.', 0),
+(9, 'Reflex Puppy Food Lamb and Rice', 343.00, 500, 'uploads/products/prod_20250913_091207_e6d4c9bc5730.webp', NULL, 'Each pouch is packed with essential nutrients designed to support your dog’s overall health and vitality. With a carefully formulated recipe, you can rest assured that your furry companion is getting the balanced diet they deserve.', 0);
 
 -- --------------------------------------------------------
 
@@ -662,7 +665,8 @@ CREATE TABLE `request` (
 --
 
 INSERT INTO `request` (`id`, `applicant_name`, `email`, `phone`, `pet_name`, `breed`, `request_date`, `score`, `status`, `notes`, `shelter_id`, `pet_id`, `addoption_id`, `pet_source`, `owner_id`, `applicant_id`, `message`, `experience`, `created_at`, `updated_at`) VALUES
-(2, '', '', '30274917493', '', '', '2025-09-13 01:38:13', NULL, 'pending', NULL, 35, NULL, 6, 'addoption', NULL, 34, 'can i have more info ?', 'I had experienced two rabbits in past', '2025-09-13 01:38:13', '2025-09-13 01:38:13');
+(4, '', '', '30274917493', '', '', '2025-09-13 12:46:39', NULL, 'pending', NULL, 36, NULL, 14, 'addoption', NULL, 42, 'can i have more info ?', '', '2025-09-13 12:46:39', '2025-09-13 12:46:39'),
+(5, '', '', '+923352176482', '', '', '2025-09-13 12:47:59', NULL, 'pending', NULL, 36, NULL, 11, 'addoption', NULL, 42, 'can i have more info ?', '', '2025-09-13 12:47:59', '2025-09-13 12:47:59');
 
 -- --------------------------------------------------------
 
@@ -702,7 +706,8 @@ CREATE TABLE `shelters` (
 --
 
 INSERT INTO `shelters` (`user_id`, `shelter_name`, `reg_no`, `capacity`, `address`, `city`, `country`, `logo_image`, `reg_doc`) VALUES
-(35, 'Kamran House', 'PV-783032084', 80, 'golmarket', 'Karachi', 'Pakistan', 'uploads/shelters/logo_35.jpg', 'uploads/shelters/doc_35.pdf');
+(36, 'ahtisham spport', '12345123456767', 23, 'houser', 'Karachi', 'Pakistan', 'uploads/shelters/logo_36.jpg', 'uploads/shelters/doc_36.pdf'),
+(44, 'Pets Health 2', 'PV-428472947202', 70, 'Dallas', 'Chicago', 'United States', 'uploads/shelters/logo_44.jpg', 'uploads/shelters/doc_44.pdf');
 
 -- --------------------------------------------------------
 
@@ -742,9 +747,9 @@ CREATE TABLE `testimonials` (
 --
 
 INSERT INTO `testimonials` (`id`, `name`, `role`, `avatar`, `rating`, `message`, `is_active`, `created_at`) VALUES
-(1, 'Ayesha', 'owner', 'uploads/avatars/user1.jpg', 5, 'FurShield made managing Buddy’s vaccinations so easy!', 1, '2025-09-09 19:38:17'),
-(2, 'Dr. Imran', 'vet', 'uploads/avatars/vet1.jpg', 4, 'The system helps me track appointments & history quickly.', 1, '2025-09-09 19:38:17'),
-(3, 'Happy Paws Shelter', 'shelter', 'uploads/avatars/shelter1.jpg', 5, 'Adoption requests are streamlined, less paperwork!', 1, '2025-09-09 19:38:17');
+(1, 'Ayesha', 'owner', '/uploads/testimonials/t-e39f4110.jpg', 5, 'FurShield made managing Buddy’s vaccinations so easy!', 1, '2025-09-09 19:38:17'),
+(2, 'Dr. Imran', 'vet', '/uploads/testimonials/t-42c582f8.jpg', 4, 'The system helps me track appointments & history quickly.', 1, '2025-09-09 19:38:17'),
+(3, 'Happy Paws Shelter', 'shelter', '/uploads/testimonials/t-cd4e7037.jpg', 5, 'Adoption requests are streamlined, less paperwork!', 1, '2025-09-09 19:38:17');
 
 -- --------------------------------------------------------
 
@@ -771,13 +776,16 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `role`, `name`, `email`, `phone`, `pass_hash`, `status`, `created_at`, `approved_at`, `image`) VALUES
 (8, 'admin', 'Admin', 'admin@furshield.com', NULL, '$2y$10$dR14ppztN1x9tkzerOtOwuJd67UEQnDp4ThWwiVWdFmlNPcdHC4XO', 'active', '2025-09-10 15:59:31', NULL, NULL),
-(12, 'owner', 'Ayesha', 'ayesha@gmail.com', '30157924792', 'aysha.123', 'active', '2025-09-10 16:16:38', NULL, 'uploads/avatars/ava_20250911_111755_b83b92dd.jpg'),
-(29, 'owner', 'Talha Owner', 'talha.owner@example.com', '03001234567', 'owner123', 'pending', '2025-09-11 10:02:57', NULL, NULL),
-(30, 'vet', 'Dr Ayesha', 'vet.ayesha@example.com', NULL, 'vet123', 'pending', '2025-09-11 10:02:57', NULL, NULL),
-(32, 'owner', 'Hunain Sheikh', 'hunain123@gmail.com', '30274917493', '$2y$10$nkgWP6OVhDAKSbVBIhA4puOpQIf5EcKx.y.aIaB7mIcDIvLyGAKua', 'active', '2025-09-11 13:16:08', NULL, 'uploads/avatars/ava_20250911_151941_b9f7a37a.jpg'),
-(33, 'vet', 'Ubaid', 'ubaid123@gmail.com', '3015647383', '$2y$10$INdMcmNhkCLchTehqgL9Hu4wUPwb2a6g9gJ5nsqr2ng7VgnCQmML.', 'active', '2025-09-11 13:43:14', '2025-09-11 13:43:50', NULL),
-(34, 'owner', 'Dahim Alam', 'dahimalam00@gmail.com', '03352176482', '$2y$10$efuATF18DZ5RZvCn1vHW0euZ3Jt4MtLRm5oucjTpE7qu0rjXlFnzS', 'active', '2025-09-12 11:29:48', NULL, NULL),
-(35, 'shelter', 'Kamran', 'kam123@gmail.com', '03352176482', '$2y$10$dZ2oVkaWCrb.7e0sREQX2.dEc7qfVV0OqNW1tjOpyXqltWi0lYyla', 'active', '2025-09-12 18:14:23', '2025-09-12 18:15:05', NULL);
+(36, 'shelter', 'anas', 'Ahtisham@gmail.com', '331 2217600', '$2y$10$CyTmUpRm7I4Aq7akG4GBAeW4gvnEkT2gTy0FspkEinGikH1qdNnLy', 'active', '2025-09-13 03:17:26', '2025-09-13 03:18:26', NULL),
+(37, 'vet', 'asians', 'syedpardasi.2@gmail.com', '331 2217600', '$2y$10$cFuW3a6Hfrvi4h3/lq9rp.4s4DmBIQw1mcM0v30hpLTFCiSbdQslC', 'active', '2025-09-13 03:24:39', '2025-09-13 03:25:29', NULL),
+(39, 'owner', 'anas', 'sham@gmail.com', '03312217600', '$2y$10$acmcWa1VZquhamOUQe/nQeWE2Oei.8mse55OokycAFhhwPp4a78fm', 'active', '2025-09-13 06:10:09', NULL, NULL),
+(40, 'vet', 'anas', 'anas@gmail.com', '331 2217600', '$2y$10$TVmmdy7qMu0ObMbW/.Aorej8j7m7dJtUhmyAUTF2d8qbK5tyRtCjy', 'active', '2025-09-13 07:19:25', '2025-09-13 08:40:50', NULL),
+(41, 'vet', 'asim', 'asim@example.com', '03312217600', '$2y$10$ZD/zh9ipUBv9Ya0kR9CnzOxl8Y1kCdAX37eeC.Sg3oklHdAypvVLC', 'active', '2025-09-13 07:21:02', '2025-09-13 08:40:48', NULL),
+(42, 'owner', 'Demo', 'demo123@gmail.com', '0315674893', '$2y$10$TQKo8MccRjrOLdIZ6XrvwOLuYUhTQZZo3E.asAMCRrCr2zxL0iLW6', 'active', '2025-09-13 07:42:50', NULL, 'uploads/avatars/ava_20250913_094331_ba4bcebe.jpg'),
+(43, 'vet', 'Dr.Aliza', 'aliza786@gmail.com', '301567483', '$2y$10$idsDTcwqWzsCdLShQMwUbeEnrYPp.2nIvEZ79jc8P.aqNhYLd1wA6', 'active', '2025-09-13 07:49:42', '2025-09-13 07:50:55', NULL),
+(44, 'shelter', 'Dahim', 'dahim786@gmail.com', '9247247397', '$2y$10$rh9cT3YeZRsTOTRxzEAGl.gagq2NtpzNT45ZvJfIE/1uACRbBGx4.', 'active', '2025-09-13 07:54:56', '2025-09-13 07:55:34', NULL),
+(45, 'vet', 'Demo2', 'demo2@gmail.com', '3014659204', '$2y$10$er824ObGXFA72xFPrm/8nupXB/6Gd3cduw5TzFSwyc3gSD85ZJrSO', 'active', '2025-09-13 08:28:09', '2025-09-13 08:29:13', NULL),
+(46, 'owner', 'Demo3', 'demo3@gmail.com', '30156396397', '$2y$10$N16o6lJTzCMi7cG0NdyI9OjyF5RoB5uxzARsL1vQ2A4Pd/bohCDfO', 'active', '2025-09-13 08:30:21', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -818,7 +826,11 @@ CREATE TABLE `vets` (
 --
 
 INSERT INTO `vets` (`user_id`, `name`, `specialization`, `experience_years`, `license_no`, `cnic_image`, `profile_image`, `slots_json`, `clinic_address`, `city`, `country`, `license_image`) VALUES
-(33, 'Ubaid', 'dermatology', 6, 'PV-472974729463', 'cnic_68c33343b7cbc.jpg', 'avatar_68c332bd07db6.jpg', NULL, 'Golmarket', 'Lahore', 'Pakistan', NULL);
+(37, NULL, 'jkslcascjbaj', 12, NULL, 'uploads/vets/cnic_37.jpg', 'uploads/vets/profile_37.jpg', NULL, '12345123456789', 'Karachi', 'Pakistan', NULL),
+(40, NULL, 'FurrEver Vets Animal Care', 23, NULL, 'uploads/vets/cnic_40.jpg', 'uploads/vets/profile_40.jpg', NULL, 'houser', 'Karachi', 'Pakistan', NULL),
+(41, NULL, 'Asim Vets Animal Care', 34, NULL, 'uploads/vets/cnic_41.jpg', 'uploads/vets/profile_41.jpg', NULL, 'houser', 'Karachi', 'Pakistan', NULL),
+(43, NULL, 'Vaccine', 4, NULL, 'uploads/vets/cnic_43.jpg', 'uploads/vets/profile_43.jpg', NULL, 'golmarket', 'Lahore', 'Pakistan', NULL),
+(45, NULL, 'Surgery', 6, NULL, 'uploads/vets/cnic_45.jpg', 'uploads/vets/profile_45.jpg', NULL, 'golmarket', 'Lahore', 'Pakistan', NULL);
 
 -- --------------------------------------------------------
 
@@ -850,7 +862,8 @@ INSERT INTO `vet_availability` (`id`, `vet_id`, `dow`, `specific_date`, `start_t
 (7, 33, 5, NULL, '09:00:00', '17:00:00', 1, '2025-09-11 20:19:23'),
 (8, 33, 6, NULL, '09:00:00', '18:00:00', 1, '2025-09-11 20:19:36'),
 (9, 33, NULL, '2025-09-20', '14:19:00', '15:00:00', 1, '2025-09-11 20:20:03'),
-(10, 33, NULL, '2025-09-20', '14:19:00', '15:00:00', 1, '2025-09-11 20:27:44');
+(10, 33, NULL, '2025-09-20', '14:19:00', '15:00:00', 1, '2025-09-11 20:27:44'),
+(11, 43, 0, NULL, '10:00:00', '13:00:00', 1, '2025-09-13 07:52:25');
 
 -- --------------------------------------------------------
 
@@ -1244,7 +1257,7 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT for table `addoption`
 --
 ALTER TABLE `addoption`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `adoption_agreements`
@@ -1286,7 +1299,7 @@ ALTER TABLE `appointments`
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `brands`
@@ -1310,7 +1323,7 @@ ALTER TABLE `contact_messages`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `faqs`
@@ -1328,7 +1341,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `health_records`
 --
 ALTER TABLE `health_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `medical_records`
@@ -1370,7 +1383,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT for table `pets`
 --
 ALTER TABLE `pets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `pet_allergies`
@@ -1394,13 +1407,13 @@ ALTER TABLE `pet_vaccinations`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `request`
 --
 ALTER TABLE `request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `reviews`
@@ -1424,13 +1437,13 @@ ALTER TABLE `testimonials`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `vet_availability`
 --
 ALTER TABLE `vet_availability`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `vet_reviews`
